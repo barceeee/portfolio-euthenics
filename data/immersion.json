@@ -7,22 +7,68 @@
     "Practice professional habits: punctuality, accountability, data privacy and respect for company policies.",
     "Build a network of mentors and finish my immersion with a recommendation and a clear picture of my first job."
   ],
-
   "resume": {
     "personal": [
-      { "label": "Name", "value": "Randy Matthew C. Sanchez" },
-      { "label": "Program", "value": "BS Information Technology, 4th year" },
-      { "label": "School", "value": "STI College Alabang" },
-      { "label": "Location", "value": "Muntinlupa City, Philippines" },
-      { "label": "Email", "value": "sanchezrandymatthew08@gmail.com", "href": "mailto:sanchezrandymatthew08@gmail.com" },
-      { "label": "GitHub", "value": "github.com/barceeee", "href": "https://github.com/barceeee" }
+      {
+        "label": "Name",
+        "value": "Randy Matthew C. Sanchez"
+      },
+      {
+        "label": "Program",
+        "value": "BS Information Technology, 4th year"
+      },
+      {
+        "label": "School",
+        "value": "STI College Alabang"
+      },
+      {
+        "label": "Location",
+        "value": "Muntinlupa City, Philippines"
+      },
+      {
+        "label": "Email",
+        "value": "sanchezrandymatthew08@gmail.com",
+        "href": "mailto:sanchezrandymatthew08@gmail.com"
+      },
+      {
+        "label": "GitHub",
+        "value": "github.com/barceeee",
+        "href": "https://github.com/barceeee"
+      },
+      {
+        "label": "LinkedIn",
+        "value": "linkedin.com/in/randy-matthew-sanchez-851a09360",
+        "href": "https://www.linkedin.com/in/randy-matthew-sanchez-851a09360/"
+      }
     ],
     "education": [
-      { "title": "Bachelor of Science in Information Technology", "place": "STI College Alabang, Muntinlupa City", "period": "2023 – present (graduating 2026–2027)" }
+      {
+        "title": "Bachelor of Science in Information Technology",
+        "place": "STI College Alabang, Muntinlupa City",
+        "period": "2023 – present (graduating 2026–2027)"
+      }
     ],
     "skills": {
-      "Technical": ["PHP", "JavaScript", "React", "SQL (PostgreSQL, MySQL)", "Supabase", "HTML & CSS", "C# / Unity", "Java", "Git & GitHub", "Computer Systems Servicing"],
-      "Soft": ["Communication", "Teamwork", "Leadership", "Problem solving", "Digital literacy", "Adaptability"]
+      "Technical": [
+        "PHP",
+        "JavaScript",
+        "React",
+        "SQL (PostgreSQL, MySQL)",
+        "Supabase",
+        "HTML & CSS",
+        "C# / Unity",
+        "Java",
+        "Git & GitHub",
+        "Computer Systems Servicing"
+      ],
+      "Soft": [
+        "Communication",
+        "Teamwork",
+        "Leadership",
+        "Problem solving",
+        "Digital literacy",
+        "Adaptability"
+      ]
     },
     "achievements": [
       "Lead developer of the STI-360 capstone: led a 5-person team and shipped a live campus portal with 7 role-based dashboards.",
@@ -34,7 +80,6 @@
       "Oracle Academy: Java Fundamentals, Award of Course Completion (June 19, 2024)"
     ]
   },
-
   "achievements": [
     {
       "type": "Certificate",
@@ -58,16 +103,39 @@
       "description": "Chosen to lead the architecture, database design and code reviews of a 5-person capstone team."
     }
   ],
-
   "hte": {
     "lead": "I researched and evaluated three companies where I want to do my Work Immersion, using the six criteria below. Each criterion is rated from 1 (weak) to 5 (excellent).",
     "criteria": [
-      { "key": "profile", "label": "Company Profile", "description": "Size, stability and track record of the company." },
-      { "key": "industry", "label": "Industry Fit", "description": "How closely the industry and the IT work match my career in backend web development." },
-      { "key": "reputation", "label": "Reputation", "description": "How the company is known by employees, customers and the public." },
-      { "key": "learning", "label": "Learning Opportunities", "description": "Training, mentoring and real projects available to an intern." },
-      { "key": "access", "label": "Accessibility / Location", "description": "Travel time and cost from Muntinlupa, and work arrangement." },
-      { "key": "growth", "label": "Career Growth Potential", "description": "Chances of being hired and promoted after the internship." }
+      {
+        "key": "profile",
+        "label": "Company Profile",
+        "description": "Size, stability and track record of the company."
+      },
+      {
+        "key": "industry",
+        "label": "Industry Fit",
+        "description": "How closely the industry and the IT work match my career in backend web development."
+      },
+      {
+        "key": "reputation",
+        "label": "Reputation",
+        "description": "How the company is known by employees, customers and the public."
+      },
+      {
+        "key": "learning",
+        "label": "Learning Opportunities",
+        "description": "Training, mentoring and real projects available to an intern."
+      },
+      {
+        "key": "access",
+        "label": "Accessibility / Location",
+        "description": "Travel time and cost from Muntinlupa, and work arrangement."
+      },
+      {
+        "key": "growth",
+        "label": "Career Growth Potential",
+        "description": "Chances of being hired and promoted after the internship."
+      }
     ],
     "companies": [
       {
@@ -94,7 +162,14 @@
         ],
         "accessibility": "Nearest offices are in Taguig (BGC/McKinley), about 45–90 minutes from Muntinlupa by bus or P2P along SLEX/C5 depending on traffic. Some roles are hybrid.",
         "growth": "Excellent. Accenture hires fresh graduates in large numbers, and interns who perform well can move into associate developer roles with clear promotion tracks.",
-        "ratings": { "profile": 5, "industry": 5, "reputation": 5, "learning": 5, "access": 3, "growth": 5 }
+        "ratings": {
+          "profile": 5,
+          "industry": 5,
+          "reputation": 5,
+          "learning": 5,
+          "access": 3,
+          "growth": 5
+        }
       },
       {
         "id": "civicom",
@@ -120,7 +195,14 @@
         ],
         "accessibility": "Located in Alabang, Muntinlupa City: a short jeepney or tricycle ride, the lowest travel time and cost of the three.",
         "growth": "Good. A growing mid-sized company where interns can be noticed and absorbed, though with fewer specialized developer tracks than Accenture.",
-        "ratings": { "profile": 4, "industry": 4, "reputation": 3, "learning": 4, "access": 5, "growth": 4 }
+        "ratings": {
+          "profile": 4,
+          "industry": 4,
+          "reputation": 3,
+          "learning": 4,
+          "access": 5,
+          "growth": 4
+        }
       },
       {
         "id": "uratex",
@@ -146,7 +228,14 @@
         ],
         "accessibility": "Head office on the East Service Road in Muntinlupa, reachable by bus or jeepney along the South Superhighway in about 20–30 minutes.",
         "growth": "Fair to good. Stable company with possible roles in IT support or systems, but fewer software-engineering positions.",
-        "ratings": { "profile": 4, "industry": 3, "reputation": 5, "learning": 3, "access": 5, "growth": 3 }
+        "ratings": {
+          "profile": 4,
+          "industry": 3,
+          "reputation": 5,
+          "learning": 3,
+          "access": 5,
+          "growth": 3
+        }
       }
     ],
     "recommendation": {
@@ -177,7 +266,6 @@
       }
     ]
   },
-
   "reflection": {
     "question": "How has preparing for Work Immersion helped me understand my career goals and future professional responsibilities?",
     "paragraphs": [
@@ -187,25 +275,59 @@
       "Most of all, this preparation taught me that being a professional means more than writing code that works. It means arriving on time, communicating clearly when something goes wrong, protecting the data I am trusted with and respecting the people I work with. Work Immersion is my chance to practice these responsibilities in a real workplace, and I want to enter it ready to learn, contribute and take my first real step toward my career."
     ]
   },
-
   "careerPlan": [
-    { "when": "2026 – 2027", "title": "Intern & graduate", "description": "Complete Work Immersion, finish the STI-360 capstone and graduate with a BS in Information Technology." },
-    { "when": "Year 1 – 2", "title": "Junior Backend Developer", "description": "Join a software team, master code reviews, testing and deployment, and earn a cloud certification (AWS or Microsoft Azure fundamentals)." },
-    { "when": "Year 3", "title": "Backend Developer", "description": "Own features end to end: API design, database performance and security. Mentor interns and junior developers." },
-    { "when": "Year 4 – 5", "title": "Senior Developer / Tech Lead", "description": "Lead a small team, make architecture decisions and keep learning, possibly through a graduate degree or specialist certifications." }
+    {
+      "when": "2026 – 2027",
+      "title": "Intern & graduate",
+      "description": "Complete Work Immersion, finish the STI-360 capstone and graduate with a BS in Information Technology."
+    },
+    {
+      "when": "Year 1 – 2",
+      "title": "Junior Backend Developer",
+      "description": "Join a software team, master code reviews, testing and deployment, and earn a cloud certification (AWS or Microsoft Azure fundamentals)."
+    },
+    {
+      "when": "Year 3",
+      "title": "Backend Developer",
+      "description": "Own features end to end: API design, database performance and security. Mentor interns and junior developers."
+    },
+    {
+      "when": "Year 4 – 5",
+      "title": "Senior Developer / Tech Lead",
+      "description": "Lead a small team, make architecture decisions and keep learning, possibly through a graduate degree or specialist certifications."
+    }
   ],
-
   "contact": {
     "note": "Open to Work Immersion and internship opportunities. The fastest way to reach me is email."
   },
-
   "sources": [
-    { "label": "Accenture Philippines: official site", "url": "https://www.accenture.com/ph-en" },
-    { "label": "Accenture in the Philippines: Technology Academy (Prosple)", "url": "https://slu.prosple.com/graduate-employers/accenture-in-the-philippines/jobs-internships/technology-academy" },
-    { "label": "Civicom Pacific Corp.: company profile (Kalibrr)", "url": "https://www.kalibrr.com/id-ID/c/civicom-pacific-corp/jobs" },
-    { "label": "Civicom: company profile and location (JobStreet)", "url": "https://ph.jobstreet.com/companies/civicom-168553040947501" },
-    { "label": "Uratex: Our Story", "url": "https://uratex.com.ph/pages/our-story" },
-    { "label": "Uratex for Business: About Us", "url": "https://business.uratex.com.ph/about-us" },
-    { "label": "Technology icons: Devicon (MIT) and Simple Icons (CC0)", "url": "https://devicon.dev" }
+    {
+      "label": "Accenture Philippines: official site",
+      "url": "https://www.accenture.com/ph-en"
+    },
+    {
+      "label": "Accenture in the Philippines: Technology Academy (Prosple)",
+      "url": "https://slu.prosple.com/graduate-employers/accenture-in-the-philippines/jobs-internships/technology-academy"
+    },
+    {
+      "label": "Civicom Pacific Corp.: company profile (Kalibrr)",
+      "url": "https://www.kalibrr.com/id-ID/c/civicom-pacific-corp/jobs"
+    },
+    {
+      "label": "Civicom: company profile and location (JobStreet)",
+      "url": "https://ph.jobstreet.com/companies/civicom-168553040947501"
+    },
+    {
+      "label": "Uratex: Our Story",
+      "url": "https://uratex.com.ph/pages/our-story"
+    },
+    {
+      "label": "Uratex for Business: About Us",
+      "url": "https://business.uratex.com.ph/about-us"
+    },
+    {
+      "label": "Technology icons: Devicon (MIT) and Simple Icons (CC0)",
+      "url": "https://devicon.dev"
+    }
   ]
 }

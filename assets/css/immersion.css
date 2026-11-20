@@ -127,7 +127,9 @@
 /* ---------- 8. Contact ---------- */
 .contact { padding: 0 var(--gutter) 24px; display: grid; gap: 14px; }
 .contact__note { margin: 0; color: #d9d9df; }
-.contact__list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 10px; }
+/* flex-wrap so every row is filled edge to edge, whatever the number of cards */
+.contact__list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.contact__list > li { flex: 1 1 240px; }
 .contact__item { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); min-width: 0; }
 .contact__item > span:last-child { display: flex; flex-direction: column; min-width: 0; overflow-wrap: anywhere; }
 .contact__icon { flex: none; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 10px; background: rgba(244,63,94,.15); font-size: 18px; }
