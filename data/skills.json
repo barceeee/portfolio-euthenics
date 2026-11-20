@@ -95,34 +95,34 @@
   "softTitle": "Soft Skills",
   "soft": [
     {
-      "title": "Leadership",
-      "icon": "🧭",
-      "evidence": "Lead developer of a 5-person capstone team (STI-360)"
-    },
-    {
-      "title": "Client Communication",
+      "title": "Communication",
       "icon": "💬",
-      "evidence": "Turned two freelance clients' needs into working systems"
+      "evidence": "Turned two freelance clients’ needs into working systems and presented the capstone to advisers"
     },
     {
       "title": "Teamwork",
       "icon": "🤝",
-      "evidence": "Code reviews and GitHub workflow across the capstone team"
+      "evidence": "Code reviews and a shared GitHub workflow across the 5-person capstone team"
+    },
+    {
+      "title": "Leadership",
+      "icon": "🧭",
+      "evidence": "Lead developer of the STI-360 capstone team"
     },
     {
       "title": "Problem Solving",
       "icon": "🧩",
-      "evidence": "Replaced a client's Excel workflow with one app"
+      "evidence": "Replaced a client’s Excel workbooks and paper records with one app"
+    },
+    {
+      "title": "Digital Literacy",
+      "icon": "💻",
+      "evidence": "Cloud tools, GitHub, Supabase, Vercel and AI APIs used daily; TESDA CSS NC II"
     },
     {
       "title": "Adaptability",
       "icon": "⚡",
       "evidence": "Web, databases, hardware and game development"
-    },
-    {
-      "title": "Self-Directed Learning",
-      "icon": "📚",
-      "evidence": "Picked up React, Supabase and Unity through projects"
     }
   ]
 }

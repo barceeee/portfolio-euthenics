@@ -1,3 +1,4 @@
+import { loadImmersion, part, renderGoals, renderResume, renderAchievements, renderHte, renderReflection, renderCareerPlan, renderContact, renderSources } from "./immersion.js";
 import { h, has, isDev, safeUrl, loadSite, caseStudyUrl, initials, initNav, renderBrand, renderFooter, setCanonical, devNote, reducedMotion, pauseHeroWhenOffscreen, loadLanguages, repoLanguages, languageBar, linkAttrs, opensNewTab } from "./common.js";
 
 let GH = null; // GitHub language data
@@ -16,21 +17,34 @@ async function init() {
   renderBrand(profile);
   renderFooter(profile);
   setCanonical(profile);
-  document.title = profile.name ? `${profile.name} — Portfolio` : "Portfolio";
+  document.title = profile.name ? `${profile.name} — Work Immersion Portfolio` : "Work Immersion Portfolio";
 
   const all = categories.flatMap((c) => c.items);
   const featured = all.find((i) => i.featured) || all[0];
   GH = await loadLanguages();
   const skills = await fetch("/data/skills.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : null)).catch(() => null);
+  const imm = await loadImmersion();
+  const pick = (...ids) => categories.filter((c) => ids.includes(c.id));
 
-  renderNavLinks(categories);
+  // The 8 sections EUTHENICS 2 Requirement 4 asks for, in its order (+ the bonus career plan).
+  renderNavLinks();
   main.replaceChildren(
     renderHero(featured, profile, categories),
-    renderTop10(skills),
-    renderAbout(profile),
-    renderSoftSkills(skills),
-    ...clustered(categories),
-    renderCaseStudies(categories)
+    part("profile", 1, "Professional Profile", "Who I am, what I am aiming for, and what I want to get out of Work Immersion.",
+      renderAbout(profile), renderGoals(imm)),
+    part("resume", 2, "Résumé", "My curriculum vitae at a glance. Print it or save it as a PDF.",
+      renderResume(imm, profile)),
+    part("skills", 3, "Skills Showcase", "Technical skills ranked by how much I have used them, the soft skills behind them, and the tools I build with.",
+      renderTop10(skills), renderSoftSkills(skills), ...clustered(pick("languages"))),
+    part("achievements", 4, "Academic Achievements", "Certificates, trainings and recognitions, with the scans to back them up. Open a card to see the full certificate.",
+      ...clustered(pick("certifications", "education")), renderAchievements(imm)),
+    part("work", 5, "Work Samples & Projects", "My best outputs: a capstone, client work and personal projects. Most can be opened as a live site or a playable demo.",
+      ...clustered(pick("capstone", "freelancing", "projects")), renderCaseStudies(categories)),
+    part("hte", 6, "Company & HTE Evaluation", imm?.hte?.lead, renderHte(imm)),
+    part("reflection", 7, "Reflection", "On preparing for Work Immersion.", renderReflection(imm)),
+    part("career-plan", "+", "Career Development Plan", "Where I plan to be in the next 3 to 5 years.", renderCareerPlan(imm)),
+    part("contact", 8, "Contact Information", null, renderContact(imm, profile)),
+    renderSources(imm)
   );
   observeEntrances();
   pauseHeroWhenOffscreen();
@@ -218,16 +232,11 @@ function renderIntro(profile) {
     has(profile.email) ? h("a", { class: "intro__email", href: `mailto:${profile.email}`, title: profile.email }, "✉ Email me") : null);
 }
 
-function renderNavLinks(categories) {
+function renderNavLinks() {
   const ul = document.querySelector(".nav__links");
-  const visible = categories.filter((c) => c.items.length || isDev);
-  ul.replaceChildren(
-    h("li", {}, h("a", { href: "#row-top10" }, "Top 10")),
-    h("li", {}, h("a", { href: "#about" }, "About")),
-    h("li", {}, h("a", { href: "#soft-skills" }, "Soft Skills")),
-    ...visible.map((c) => h("li", {}, h("a", { href: `#row-${c.id}` }, c.title))),
-    h("li", {}, h("a", { href: "#case-studies" }, "Case studies"))
-  );
+  const links = [["profile", "Profile"], ["resume", "Résumé"], ["skills", "Skills"], ["achievements", "Achievements"],
+    ["work", "Projects"], ["hte", "HTE Evaluation"], ["reflection", "Reflection"], ["career-plan", "Career Plan"], ["contact", "Contact"]];
+  ul.replaceChildren(...links.map(([id, label]) => h("li", {}, h("a", { href: `#${id}` }, label))));
 }
 
 /* Consecutive categories sharing a "cluster" (categories.json) sit side by side on wide screens. */
@@ -348,9 +357,9 @@ function renderCaseStudies(categories) {
         h("span", { class: "case__cta" }, "Read case study →")))));
 
   if (!items.length && !isDev) return null;
-  return h("section", { class: "section", id: "case-studies", "aria-labelledby": "cs-title" },
-    h("h2", { class: "section__title reveal", id: "cs-title" }, "Freelancing & Capstone"),
-    h("p", { class: "section__lead reveal" }, "In-depth case studies: the problem, the stack, what I built and how it turned out."),
+  return h("section", { class: "cases-wrap", id: "case-studies", "aria-labelledby": "cs-title" },
+    h("h3", { class: "row__title reveal", id: "cs-title" }, "Case studies"),
+    h("p", { class: "section__lead reveal" }, "In-depth write-ups: the problem, the stack, what I built and how it turned out."),
     items.length ? list : devNote("Add entries with a \"slug\" to data/freelancing.json and data/capstone.json and they appear here, each with its own page at /projects/<slug>."));
 }
 
