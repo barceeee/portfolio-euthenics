@@ -61,8 +61,9 @@
 .criteria li { display: flex; flex-direction: column; gap: 2px; padding: 12px 14px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); font-size: 13.5px; color: var(--muted); }
 .criteria b { color: var(--text); font-size: 14.5px; }
 
-.companies { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 16px; align-items: start; }
-.company { position: relative; padding: 20px; border-radius: var(--radius); border: 1px solid var(--line); overflow: hidden;
+.companies { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 16px; align-items: stretch; }
+/* every card spans 3 shared rows (header, background, evaluation), so they line up and match in height */
+.company { position: relative; display: grid; grid-template-rows: subgrid; grid-row: span 3; row-gap: 0; align-content: start; padding: 20px; border-radius: var(--radius); border: 1px solid var(--line); overflow: hidden;
   background: radial-gradient(100% 80% at 100% 0%, hsl(var(--hue) 75% 45% / .28), transparent 65%), var(--surface); }
 .company__head { display: flex; align-items: flex-start; gap: 14px; }
 .company__logo { flex: none; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 12px; font: 400 20px/1 var(--font-display); letter-spacing: .06em; background: hsl(var(--hue) 70% 45% / .35); border: 1px solid hsl(var(--hue) 70% 60% / .5); }
@@ -83,8 +84,11 @@
 .cons li::marker { content: "–  "; color: #f87171; font-weight: 700; }
 
 .table-scroll { margin-top: 12px; overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--line); }
-.compare { width: 100%; min-width: 560px; border-collapse: collapse; font-size: 14px; }
-.compare th, .compare td { padding: 11px 14px; text-align: left; border-bottom: 1px solid var(--line); }
+.compare { width: 100%; min-width: 640px; border-collapse: collapse; table-layout: fixed; font-size: 14px; }
+/* four equal columns; the company columns are centred */
+.compare th, .compare td { width: 25%; }
+.compare :is(thead th, td):not(:first-child) { text-align: center; }
+.compare th, .compare td { padding: 12px 18px; text-align: left; border-bottom: 1px solid var(--line); }
 .compare thead th { background: var(--surface-2); font-size: 13px; }
 .compare tbody th { font-weight: 600; color: #d9d9df; }
 .compare tfoot th, .compare tfoot td { border-bottom: 0; background: var(--surface-2); }
