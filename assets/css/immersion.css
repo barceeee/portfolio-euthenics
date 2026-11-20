@@ -56,7 +56,8 @@
 .cases-wrap .row__title { margin-bottom: 4px; }
 
 /* ---------- 6. HTE evaluation ---------- */
-.hte { display: grid; gap: 28px; padding: 0 var(--gutter) 24px; }
+/* minmax(0, 1fr): the wide comparison table scrolls inside its own box instead of stretching the page on phones */
+.hte { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; padding: 0 var(--gutter) 24px; }
 .criteria { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 10px; }
 .criteria li { display: flex; flex-direction: column; gap: 2px; padding: 12px 14px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); font-size: 13.5px; color: var(--muted); }
 .criteria b { color: var(--text); font-size: 14.5px; }
